@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+
+* {
+  box-sizing: border-box;
+  font-family: "Raleway";
+  margin: 0;
+  padding: 0;
+  color: #000000;
+}
+
+body {
+    font-family: "Raleway", serif;
+    background: white;
+    margin: 50px;
+}
+
+.icon {
+    position: relative;
+    width: 100px;
+    height: auto;
+}
+
+.menu div {
+    text-align: center;
+    align-items: center;
+    position: relative;
+    float: right;
+    top: -50px;
+    right: 200px;
+}
+
+.box1 {
+    width: 161px;
+    height: 60px;
+    background-color: red;
+}
+
+.page1 {
+    text-align: center;
+    text-decoration: none;
+    position: absolute;
+    color: #000000;
+}
+
+.page2 {
+    text-decoration: none;
+    position: absolute;
+    color: #000000;
+}
+
+h1 {
+    display: block;
+    margin-top: 70px;
+    size: 21px;
+    margin-bottom: 8px;
+}
+
+p {
+    margin-bottom:40px;
+}
+
+h2 {
+    size: 18px;
+}
+
+div .searchdiv{
+    display: inline-block;
+}
+
+.fa-location-dot {
+    width: 50px;
+    height: 50px;
+    background-color: #F2F2F2;
+    border: 1px solid #F2F2F2;
+    border-radius: 15px 0px 0px 15px;
+    padding-left: 20px;
+    padding-top: 15px;
+    margin-right: -5px;
+} 
+
+.inputsearch {
+    width: 200px;
+    height: 50px;
+    border: 1px #F2F2F2 solid;
+    padding-left: 17px;
+    padding-bottom: 2px;
+    font-size: 17px;
+}
+
+.inputsearch::placeholder {
+    color: #000000;
+}
+
+.search {
+    border-radius: 0px 15px 15px 0px;
+    border: 1px #0065FC solid;
+    width: auto;
+    height: 50px;
+    margin-left: -5px;
+    margin-bottom: 32px;
+    padding-bottom: 3px;
+    padding-inline: 16px;
+    background-color: #0065FC;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+}
+
+.search:hover {
+    cursor: pointer;
+    background-color: #227aff;
+}
+
+h2 {
+    font-size: 18px;
+    display: inline-block;
+    margin-bottom: 35px;
+}
+
+.filters div {
+    display: inline-block;
+}
+
+.filter {
+    margin-left: 32px;
+    padding: 14px 20px;
+    border: 2px #D9D9D9 solid;
+    border-radius: 25px;
+    align-items: flex-start;
+    font-size: 17px;
+    background-color: white;
+    font-weight: bold;
+}
+
+.filter i {
+    width: 22px;
+    height: auto;
+    margin-right: 10px;
+    color: #0065FC;
+}
+
+.filter:hover {
+    background-color: #DEEBFF;
+    cursor: pointer;
+}
+
+.result i {
+    display: inline-block;
+    font-size: 15px;
+    color: #0065FC;
+    border: 1px solid #D9D9D9;
+    border-radius: 50%;
+    padding: 6px 11px;
+    margin-right: 11px;
+}
+
+.result p {
+    display: inline-block;
+}
