@@ -1,5 +1,23 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway");
 
+/* Media Query for Mobile Devices */
+@media (max-width: 767px) {
+    .searchmobile {display: block;}
+    .searchcomputer {display: none;}
+}
+
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px){
+    .searchmobile {display: none;}
+    .searchcomputer {display: block;}
+}
+
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px){
+    .searchmobile {display: none;}
+    .searchcomputer {display: block;}
+}
+
 * {
     max-width: 1400px;
     box-sizing: border-box;
@@ -100,6 +118,7 @@ h2 {
     border: 1px #F2F2F2 solid;
     padding-left: 17px;
     font-size: 17px;
+    font-weight: bold;
 }
 
 input[type="search"]::-webkit-search-cancel-button{ display: none; }
@@ -113,13 +132,17 @@ input[type="search"]::-webkit-search-cancel-button{ display: none; }
     border: 1px #0065FC solid;
     width: auto;
     height: 50px;
-    margin-left: -5px;
-    padding-bottom: 3px;
     padding-inline: 16px;
     background-color: #0065FC;
     color: white;
     font-size: 18px;
     text-align: center;
+}
+
+.search i::before {
+    display: relative;
+    color: white;
+    width: 22px;
 }
 
 .search:hover {
