@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway");
 
 /* Media Query for Mobile Devices */
-@media (max-width: 767px) {
+@media (max-width: 50em) {
     .searchmobile {display: block;}
     .searchcomputer {display: none;}
 }
@@ -25,7 +25,6 @@
     margin: 0;
     padding: 0;
     color: #000000;
-    background-color: red;
 }
 
 body {
