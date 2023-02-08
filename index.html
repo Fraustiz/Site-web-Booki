@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
         <link rel="stylesheet" href="css/style.css">
         <title>Booki</title>
         <link rel="shortcut icon" type="image/ico" href="images/logo/favicon.ico">
@@ -13,11 +13,11 @@
         <a href="index.html"><img src="images/logo/Booki.png" class="icon" alt="Logo de Booki"></a>
         <div class="menu">
 
-            <div class="box2 flex">
+            <div class="box2">
                 <a href="#activity" class="page2">Activités</a>
             </div>
 
-            <div class="box1 flex">
+            <div class="box1">
                 <a href="#accommodation" class="page1">Hébergements</a>
             </div>
 
@@ -41,26 +41,27 @@
         </div>
 
         <!--Filtres-->
-        <div class="filters flex">
+        <div class="filters">
             <h2>Filtres</h2>
-            <div>
-                <button class="filter"><i class="fa-solid fa-money-bill-wave"></i>Économique</button>
-            </div>
-            <div>
-                <button class="filter"><i class="fa-solid fa-person"></i>Familial</button>
-            </div>
-            <div>
-                <button class="filter"><i class="fa-solid fa-heart"></i>Romantique</button>
-            </div>
-            <div>
-                <button class="filter"><i class="fa-solid fa-dog"></i>Animaux autorisés</button>
+            <div class="filter-buttons">
+                <div class="filter-button-box">
+                    <button class="filter-button"><i class="fa-solid fa-money-bill-wave"></i>Économique</button>
+                </div>
+                <div class="filter-button-box">
+                    <button class="filter-button"><i class="fa-solid fa-person"></i>Familial</button>
+                </div>
+                <div class="filter-button-box">
+                    <button class="filter-button"><i class="fa-solid fa-heart"></i>Romantique</button>
+                </div>
+                <div class="filter-button-box">
+                    <button class="filter-button"><i class="fa-solid fa-dog"></i>Animaux autorisés</button>
+                </div>
             </div>
         </div>
 
         <!--Nmb résultats-->
         <div class="result">
-            <i class="fa-solid fa-info"></i>
-            <p></i> Plus de 500 logements sont disponibles dans cette ville</p>
+            <p><i class="fa-solid fa-info"></i>Plus de 500 logements sont disponibles dans cette ville</p>
         </div>
 
         <!--Résultats-->
@@ -261,38 +262,38 @@
                             <img src="images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="Image de Notre-Dane-de-la-Garde">
                         </div>
                         <div class="activity-box-content">
-                            <h2>Notre-Dane-de-la-Garde</h2>
+                            <h2>Notre-Dame-de-la-Garde</h2>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <footer>
+            <!--Bottom-->
+            <div class="bottom-info">
+                <div class="bottom-box">
+                    <div class="bottom-about">
+                        <h2>À propos</h2>
+                        <p>Fonctionnement du site</p>
+                        <p>Conditions générales</p>
+                        <p>Données et confidentialité</p>
+                    </div>
+                </div>
+                <div class="bottom-box">
+                    <div class="bottom-accommodation">
+                        <h2>Nos hébergements</h2>
+                        <p>Charte de qualité</p>
+                        <p>Proposer votre hôtel</p>
+                    </div>
+                </div>
+                <div class="bottom-box">
+                    <div class="bottom-help">
+                        <h2>Assistance</h2>
+                        <p>Centre d'aide</p>
+                        <p>Nous contacter</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </body>
-    <footer>
-        <!--Bottom-->
-        <div class="bottom-info">
-            <div class="bottom-box">
-                <div class="bottom-about">
-                    <h2>À propos</h2>
-                    <p>Fonctionnement du site</p>
-                    <p>Conditions générales</p>
-                    <p>Données et confidentialité</p>
-                </div>
-            </div>
-            <div class="bottom-box">
-                <div class="bottom-accommodation">
-                    <h2>Nos hébergements</h2>
-                    <p>Charte de qualité</p>
-                    <p>Proposer votre hôtel</p>
-                </div>
-            </div>
-            <div class="bottom-box">
-                <div class="bottom-help">
-                    <h2>Assistance</h2>
-                    <p>Centre d'aide</p>
-                    <p>Nous contacter</p>
-                </div>
-            </div>
-        </div>
-    </footer>
 </html>
