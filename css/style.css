@@ -14,33 +14,6 @@
     color: #D9D9D9;
 }
 
-.container {
-    display: flex;
-    align-items: center;
-    align-content: stretch;
-    margin-bottom: 32px;
-}
-
-.div-search {
-    width: 50px;
-    border: 1px solid #F2F2F2;
-    border-radius: 15px 0px 0px 15px;
-    background-color: #F2F2F2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 16px;
-}
-
-.inputsearch {
-    width: 200px;
-    height: 50px;
-    border: 1px #F2F2F2 solid;
-    padding-left: 17px;
-    font-size: 17px;
-    font-weight: bold;
-}
-
 .inputsearch::placeholder {
         color: #000000;
 }
@@ -112,6 +85,7 @@ input[type="search"]::-webkit-search-cancel-button{ display: none; }
         margin-top: 0;
         margin-bottom:40px;
     }
+
     .search {
         border-radius: 0px 15px 15px 0px;
         border: 1px #0065FC solid;
@@ -123,6 +97,33 @@ input[type="search"]::-webkit-search-cancel-button{ display: none; }
         font-size: 18px;
         text-align: center;
         font-weight: 700;
+    }
+    
+    .container {
+        display: flex;
+        align-items: center;
+        align-content: stretch;
+        margin-bottom: 32px;
+    }
+
+    .div-search {
+        width: 50px;
+        border: 1px solid #F2F2F2;
+        border-radius: 15px 0px 0px 15px;
+        background-color: #F2F2F2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 16px;
+    }
+
+    .inputsearch {
+        width: 200px;
+        height: 50px;
+        border: 1px #F2F2F2 solid;
+        padding-left: 17px;
+        font-size: 17px;
+        font-weight: bold;
     }
 
     .search:hover {
@@ -459,6 +460,33 @@ input[type="search"]::-webkit-search-cancel-button{ display: none; }
         font-weight: 700;
     }
 
+    .container {
+    display: flex;
+    align-items: center;
+    align-content: stretch;
+    margin-bottom: 32px;
+    }
+
+    .div-search {
+        width: 50px;
+        border: 1px solid #F2F2F2;
+        border-radius: 15px 0px 0px 15px;
+        background-color: #F2F2F2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 16px;
+    }
+
+    .inputsearch {
+        width: 200px;
+        height: 50px;
+        border: 1px #F2F2F2 solid;
+        padding-left: 17px;
+        font-size: 17px;
+        font-weight: bold;
+    }
+
     .filters h2 {
         margin-top: 8px;
         margin-bottom: 0;
@@ -509,7 +537,8 @@ input[type="search"]::-webkit-search-cancel-button{ display: none; }
         display: flex;
         flex-direction: column;
         max-width: 1200px;
-        max-height: 800px;
+        min-width: 1100px;
+        height: 634px;
         padding: 42px 40px;
         background-color: #F2F2F2;
         border-radius: 20px;
@@ -517,7 +546,8 @@ input[type="search"]::-webkit-search-cancel-button{ display: none; }
     }
 
     .accommodation img {
-        width: 335px;
+        max-width: 400px;
+        min-width: 300px;
         height: 150px;
         border-radius: 20px 20px 0px 0px;
         object-fit: cover;
@@ -532,6 +562,7 @@ input[type="search"]::-webkit-search-cancel-button{ display: none; }
 
     .accommodationbox {
         max-width: 400px;
+        min-width: 300px;
         height: 240px;
         display: flex;
         flex-direction: column;
@@ -586,6 +617,7 @@ input[type="search"]::-webkit-search-cancel-button{ display: none; }
         display: flex;
         flex-direction: column;
         max-width: 1200px;
+        min-width: 1100px;
         max-height: 800px;
         padding: 41px 40px 34px 37px;
         background-color: #F2F2F2;
@@ -666,7 +698,8 @@ input[type="search"]::-webkit-search-cancel-button{ display: none; }
     }
 
     .activity-box {
-        width: 265px;
+        max-width: 265px;
+        min-width: 200px;
         height: 400px;
         position: relative;
         text-align: left;
@@ -675,13 +708,15 @@ input[type="search"]::-webkit-search-cancel-button{ display: none; }
     }
 
     .activity-box img{
-        width: 265px;
+        max-width: 265px;
+        min-width: 200px;
         height: 400px;
         border-radius: 20px;
         border-width: 0px 0px 56px 0px;
         border-style: solid;
         border-color: white;
         object-fit: cover;
+        margin-right: 43px;
     }
 
     .activity-box h2 {
@@ -733,8 +768,373 @@ input[type="search"]::-webkit-search-cancel-button{ display: none; }
 /* Media Query for Mobile Devices */
 @media only screen and (max-width: 767px) {
     body {
-        max-width: 375px;
+        max-width: 746px;
+        margin: 40px 41px 0px 41px;
+        font-family: "Raleway", serif;
     }
+    	
+    .icon {
+        position: relative;
+        width: 200px;
+        height: auto;
+        margin-bottom: 58px;
+        left: 50%;
+        transform:translateX(-50%);
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: row-reverse;
+        position: relative;
+        transform:translateX(-27%);
+    }
+
+    .box1 {
+        width: 161px;
+        height: 50px;
+        background-color: red;
+    }
+
+    .box2 {
+        width: 161px;
+        height: 50px;
+        background-color: green;
+    }
+
+    .page1, .page2 {
+        position: relative;
+        text-decoration: none;
+        color: #000000;
+        bottom: 0px;
+        left: 25%;
+    }
+
+    .title1 {
+        margin-top: 40px;
+        margin-bottom: 8px;
+    }
+
+    .titlediv p {
+        margin-top: 0;
+        margin-bottom: 80px;
+        font-size: 20px;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        align-content: stretch;
+        margin-bottom: 32px;
+        margin-left: 40px;
+    }
+
+    .div-search {
+        height: 75px;
+        width: 75px;
+        border: 1px solid #F2F2F2;
+        border-radius: 15px 0px 0px 15px;
+        background-color: #F2F2F2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 16px;
+        font-size: 24px;
+    }
+
+    .inputsearch {
+        width: 450px;
+        height: 75px;
+        border: 1px #F2F2F2 solid;
+        padding-left: 17px;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .search {
+        border-radius: 0px 15px 15px 0px;
+        border: 1px #0065FC solid;
+        width: 75px;
+        height: 75px;
+        padding-inline: 16px;
+        background-color: #0065FC;
+        color: white;
+        font-size: 24px;
+        text-align: center;
+        font-weight: 700;
+    }
+
+    .search:hover {
+        background-color: #227aff;
+    }
+
+    .filters h2 {
+        font-size: 18px;
+    }
+
+    .filters {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .filter-button {
+        display: flex;
+        flex-direction: row;
+        width: 300px;
+        padding-top: 14px;
+        padding-bottom: 14px;
+        border: 2px solid #d9d9d9;
+        border-radius: 25px;
+        background-color: white;
+        font-size: 17px;
+        font-weight: bold;
+        margin-left: 32px;
+    }
+
+    .filter-row-mobile, .filter-button  {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .filter-button i {
+        color: #0065FC;
+        margin-right: 10px;
+    }
+
+    .filter-button:hover {
+        background-color: #DEEBFF;
+    }
+
+    .result i {
+        color: #0065FC;
+        border: 1px solid #D9D9D9;
+        border-radius: 50%;
+        margin-right: 11px;
+        padding: 5px 10px 5px 10px;
+    }
+
+    .result {
+        margin-bottom: 32px;
+    }
+
+    .accommodation {
+        display: flex;
+        flex-direction: column;
+        width: 880px;
+        height: 626px;
+        padding: 42px 40px;
+        background-color: #F2F2F2;
+        border-radius: 20px;
+    }
+
+    .accommodation img {
+        width: 246px;
+        height: 124px;
+        border-radius: 20px 20px 0px 0px;
+        object-fit: cover;
+        border: 5px solid white;
+    }
+
+    .accommodation-title {
+        margin-top: 0px;
+        font-size: 22px;
+        margin-bottom: 23px;
+    }
+
+    .accommodation-row-1, .accommodation-famous, .accommodation-row-2, .activity-boxes, .filters, .filter-button-box, .filter-buttons, .filter-button, .result {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .accommodationbox {
+        width: 246px;
+        height: 199px;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        border-radius: 20px;
+        filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+        margin-right: 31px;
+        margin-bottom: 30px;
+    }
+
+    .accommodationbox:hover > .accommodation-content h2, .accommodationbox:hover, .activity-box:hover > .activity-box-content h2, .activity-box:hover, .famousbox:hover > .famous-content h2, .famousbox:hover {
+        cursor: pointer;
+        color: #0065FC;
+        filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.2));
+    }
+
+    .accommodation-content {
+        margin-left: 16px;
+    }
+
+    .accommodation-content h2 {
+        margin-top: 0;
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    .accommodation-content p {
+        margin-top: 0;
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .stars {
+        display: flex;
+        flex-direction: row;
+        height: 12px;
+        width: 12px;
+        margin-right: 2px;
+    }
+
+    .see-more h2 {
+        margin-top: 10px;
+        font-size: 18px;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    .see-more h2:hover {
+        cursor: pointer;
+        color: #0065FC;
+    }
+
+    .famous {
+        width: 420px;
+        height: 625px;
+        padding: 41px 40px 34px 37px;
+        margin-left: 40px;
+        background-color: #F2F2F2;
+        border-radius: 20px;
+    }
+
+    .famous h1 {
+        margin-top: 0;
+        font-size: 22px;
+        margin-bottom: 26px;
+    }
+
+    .famous-chart {
+        font-size: 18px;
+        color: #0065FC;
+        float: right;
+        margin-top: 5px;
+    }
+
+    .famousbox {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        width: 343px;
+        height: 144px;
+        background-color: white;
+        border-radius: 20px;
+        filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+        margin-bottom: 33px;
+    }
+
+    .famousbox img {
+        width: 137px;
+        height: 144px;
+        border-radius: 20px 0px 0px 20px;
+        border: 5px solid white;
+        object-fit: cover;
+    }
+
+    .famous-content {
+        display: flex;
+        flex-direction: column;
+        margin: 16px 22px 12px 15px;
+    }
+
+    .famous-content h2 {
+        font-size: 16px;
+        margin-bottom: 7px;
+    }
+
+    .famous-content p {
+        margin: 0;
+        font-size: 14px;
+    }
+
+    .famous-content .stars {
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 22px;
+    }
+
+    .activities h1 {
+        margin-top: 60px;
+        margin-bottom: 18px;
+        font-size: 22px;
+    }
+
+    .activities {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .activity-box {
+        width: 302px;
+        height: 444.51px;
+        position: relative;
+        text-align: center;
+        filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+        margin-right: 43px;
+    }
+
+
+
+    .activity-box img{
+        width: 302px;
+        height: 444.51px;
+        border-radius: 20px;
+        border-width: 0px 0px 56px 0px;
+        border-style: solid;
+        border-color: white;
+        object-fit: cover;
+    }
+
+    .activity-box h2 {
+        margin: 0;
+        position: absolute;
+        font-size: 16px;
+        bottom: 18px;
+        left: 19px;
+        font-weight: 700;
+    }
+
+    .bottom-info {
+        width: 1339px;
+        padding-left: 70px;
+        padding-top: 45px;
+        padding-bottom: 39px;
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        margin-top: 60px;
+        background-color: #F2F2F2;
+        text-align: center;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .bottom-box {
+        margin-right: 230px;
+    }
+
+    .bottom-box h2 {
+        margin-bottom: 20px;
+    }
+
+    .bottom-box p {
+        margin-bottom: 12px;
+    }
+
+    .bottom-box p:hover {
+        cursor: pointer;
+        color: #0065FC;
+    }
+
     .searchmobile {display: block;}
     .searchcomputer {display: none;}
 }
