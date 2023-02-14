@@ -8,6 +8,9 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     overflow-x: hidden;
     font-family: "Raleway", serif;
     color: #000000;
@@ -27,9 +30,11 @@ footer {
 }
 
 .max-width {
-    min-width: 1340px;
+    width: 100%;
     max-width: 1400px;
     margin: auto;
+    margin-left: 32px;
+    margin-right: 32px;
     font-family: "Raleway", serif;
     background: white;
 }
@@ -194,9 +199,11 @@ input[type="search"]::-webkit-search-cancel-button{ display: none; }
 
 .accommodation {
     display: flex;
-    flex-direction: column;
-    width: 880px;
-    height: 626px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 880px;
+    min-height: 626px;
     padding: 42px 40px;
     background-color: #F2F2F2;
     border-radius: 20px;
@@ -211,6 +218,7 @@ input[type="search"]::-webkit-search-cancel-button{ display: none; }
 }
 
 .accommodation-title {
+    width: 100%;
     margin-top: 0px;
     font-size: 22px;
     margin-bottom: 23px;
@@ -234,7 +242,6 @@ input[type="search"]::-webkit-search-cancel-button{ display: none; }
     background-color: white;
     border-radius: 20px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-    margin-right: 31px;
     margin-bottom: 30px;
 }
 
@@ -278,13 +285,18 @@ input[type="search"]::-webkit-search-cancel-button{ display: none; }
     text-decoration: underline;
 }
 
+.see-more {
+    width: 100%;
+}
+
 .see-more h2:hover {
     cursor: pointer;
     color: #0065FC;
 }
 
 .famous {
-    width: 420px;
+    width: 30%;
+    max-width: 420px;
     height: 625px;
     padding: 41px 40px 34px 37px;
     background-color: #F2F2F2;
@@ -311,26 +323,30 @@ input[type="search"]::-webkit-search-cancel-button{ display: none; }
     margin-top: 5px;
 }
 
-/* .famous {
+/* .famous-boxes {
     display: flex;
     flex-direction: column;
-    align-content: space-between;
+    justify-content: space-between;
 } */
 
 .famous-box {
     position: relative;
     display: flex;
     flex-direction: row;
-    width: 343px;
+    width: 98%;
     height: 144px;
     background-color: white;
     border-radius: 20px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-    /* margin-bottom: 33px; */
+    margin-bottom: 33px; /* Changer pour automatique avec align-content, voir commentaire ci-dessus */
+}
+
+.famous-img {
+    width: 40%;
 }
 
 .famous-box img {
-    width: 137px;
+    width: 100%;
     height: 144px;
     border-radius: 20px 0px 0px 20px;
     border: 5px solid white;
@@ -378,12 +394,8 @@ input[type="search"]::-webkit-search-cancel-button{ display: none; }
 .activity-box {
     width: 302px;
     height: 444.51px;
-    position: relative;
-    text-align: center;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
-
-
 
 .activity-box img{
     width: 302px;
@@ -395,12 +407,12 @@ input[type="search"]::-webkit-search-cancel-button{ display: none; }
     object-fit: cover;
 }
 
-.activity-box h2 {
-    margin: 0;
+.activity-box figcaption {
+    display: flex;
     position: absolute;
+    bottom: 20px;
+    left: 15px;
     font-size: 16px;
-    bottom: 18px;
-    left: 19px;
     font-weight: 700;
 }
 
@@ -429,4 +441,120 @@ input[type="search"]::-webkit-search-cancel-button{ display: none; }
 .bottom-box p:hover {
     cursor: pointer;
     color: #0065FC;
+}
+
+@media screen and (max-width: 1400px) {
+    .bottom-info {
+        border-radius: 0;
+    }
+}
+
+/* Écrans pc */
+@media screen and (min-width: 993px) {
+    /* Boutton recherche pc/tel */
+    .searchmobile {display: none;}
+    .searchcomputer {display: block;}
+}
+
+/* Écrans de tablette */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+
+    .max-width {
+        min-width: 768px;
+        max-width: 992px;
+        margin-inline: 50px;
+        font-family: "Raleway", serif;
+        background: white;
+    }
+
+    .accommodation-famous {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .accommodation {
+        margin-bottom: 53px;
+    }
+
+    .famous {
+        width: 880px;
+        height: 300px;
+        padding: 41px 20px 34px 37px;
+    }
+
+    .famous h1 {
+        margin-right: 40px;
+    }
+
+    .famous-boxes {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .famous-box {
+        height: 160px;
+        margin-right: 20px;
+    }
+
+    .famous-box img {
+        width: 110px;
+        height: 160px;
+    }
+
+    .famous-content {
+        margin: 16px 12px 0px 5px;
+    }
+
+    .famous-content .stars {
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 15px;
+    }
+
+    .activities {
+        width: 880px;
+    }
+    
+    .activity-box, .activity-box img {
+        width: 200px;
+        height: 300px;
+        text-align: left;
+    }
+
+    .activity-box-content {
+        padding-top: 50px;
+    }
+
+    .activity-box figcaption {
+        position: absolute;
+        font-size: 16px;
+        bottom: 18px;
+        left: 10px;
+    }
+
+    .bottom-info {
+        width: 880px;
+        background-color: #F2F2F2;
+        border-radius: 20px 20px 0 0;
+    }
+
+    /* Boutton recherche pc/tel */
+    .searchmobile {display: none;}
+    .searchcomputer {display: block;}
+}
+
+/* Écrans de téléphones */
+@media only screen and (max-width: 767px) {
+
+    .max-width {
+
+        max-width: 768px;
+        margin-inline: 50px;
+        font-family: "Raleway", serif;
+        background: white;
+    }
+
+    /* Boutton recherche pc/tel */
+    .searchmobile {display: block;}
+    .searchcomputer {display: none;}
 }
