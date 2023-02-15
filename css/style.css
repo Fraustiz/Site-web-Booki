@@ -1,5 +1,51 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway");
 
+:root {
+    --bg-mask: rgba(255, 255, 255, 0.25);
+    --scroll-size: 12px;
+    --scroll-radius: 20px;
+    --scroll-track: #d9d9d9;
+    --scroll-thumb: linear-gradient(45deg,
+            var(--bg-mask) 20%, transparent 20%,
+            transparent 40%, var(--bg-mask) 40%,
+            var(--bg-mask) 60%, transparent 60%,
+            transparent 80%, var(--bg-mask) 80%);
+    --scroll-thumb-color: #0065fc;
+}
+
+/* Styles pour la barre de défilement */
+::-webkit-scrollbar {
+    width: var(--scroll-size);
+    height: var(--scroll-size);
+    border-radius: var(--scroll-radius);
+    background-color: var(--scroll-track);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-thumb-color);
+    background-image: var(--scroll-thumb);
+    border-radius: var(--scroll-radius);
+}
+
+/* Styles pour la barre de défilement sur les autres navigateurs */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--scroll-thumb-color) var(--scroll-track);
+}
+
+*::-webkit-scrollbar {
+    width: var(--scroll-size);
+    height: var(--scroll-size);
+    border-radius: var(--scroll-radius);
+    background-color: var(--scroll-track);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-thumb-color);
+    background-image: var(--scroll-thumb);
+    border-radius: var(--scroll-radius);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -14,6 +60,7 @@ body {
     overflow-x: hidden;
     font-family: "Raleway", serif;
     color: #000000;
+    margin-left: 25px;
 }
 
 section {
@@ -33,7 +80,7 @@ footer {
     width: 100%;
     max-width: 1400px;
     margin: auto;
-    margin-left: 32px;
+    margin-left: 0;
     margin-right: 32px;
     font-family: "Raleway", serif;
     background: white;
@@ -158,7 +205,6 @@ input[type="search"]::-webkit-search-cancel-button{ display: none; }
 
 .search:hover {
     cursor: pointer;
-    background-color: #227aff;
 }
 
 .filters h2 {
@@ -166,6 +212,7 @@ input[type="search"]::-webkit-search-cancel-button{ display: none; }
 }
 
 .filter-button {
+    position: relative;
     padding: 14px 20px 14px 20px;
     border: 2px solid #d9d9d9;
     border-radius: 25px;
@@ -173,6 +220,11 @@ input[type="search"]::-webkit-search-cancel-button{ display: none; }
     font-size: 17px;
     font-weight: bold;
     margin-left: 32px;
+    background: linear-gradient(to right, #ff5f6d, #ffc371);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: all 0.5s ease-in-out;
 }
 
 .filter-button i {
@@ -181,7 +233,12 @@ input[type="search"]::-webkit-search-cancel-button{ display: none; }
 }
 
 .filter-button:hover {
-    background-color: #DEEBFF;
+    background: linear-gradient(to right, #ff5f6d, #ffc371);
+    text-shadow: 0px 0px 10px #fff;
+    -webkit-text-stroke: 1px white;
+    transform: translateX(20px);
+    background-color: #deebff;
+    color: black;
     cursor: pointer;
 }
 
@@ -250,8 +307,16 @@ input[type="search"]::-webkit-search-cancel-button{ display: none; }
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.2));
 }
 
-.accommodationbox:hover > .accommodation-content h2, .activity-box:hover > .activity-box-content h2, .famous-box:hover > .famous-content h2 {
+.accommodationbox:hover > .accommodation-content h2, .activity-box:hover > .activity-box-content figcaption, .famous-box:hover > .famous-content h2 {
     color: #0065FC;
+}
+
+.accommodationbox, .activity-box, .famous-box {
+    transition: transform 0.2s ease;
+}
+
+.accommodationbox:hover, .activity-box:hover, .famous-box:hover {
+    transform: scale(1.05);
 }
 
 .accommodation-content {
@@ -307,7 +372,8 @@ input[type="search"]::-webkit-search-cancel-button{ display: none; }
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    margin: 0;
 }
 
 .famous h1 {
@@ -387,6 +453,8 @@ input[type="search"]::-webkit-search-cancel-button{ display: none; }
 }
 
 .activity-boxes {
+    width: 100%;
+    max-width: 1400px;
     display: flex;
     justify-content: space-between;
 }
@@ -419,6 +487,7 @@ input[type="search"]::-webkit-search-cancel-button{ display: none; }
 .bottom-info {
     margin: auto;
     width: 100%;
+    width: 1400px;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -552,6 +621,19 @@ input[type="search"]::-webkit-search-cancel-button{ display: none; }
         margin-inline: 50px;
         font-family: "Raleway", serif;
         background: white;
+    }
+
+    .menu {
+        text-align: center;
+    }
+
+    .box1,
+    .box2 {
+        position: relative;
+        display: inline-block;
+        margin: 0 auto;
+        top: 50%;
+        transform: translateY(-50%);
     }
 
     /* Boutton recherche pc/tel */
