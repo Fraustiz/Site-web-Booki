@@ -13,7 +13,6 @@
     --scroll-thumb-color: #0065fc;
 }
 
-/* Styles pour la barre de défilement */
 ::-webkit-scrollbar {
     width: var(--scroll-size);
     height: var(--scroll-size);
@@ -27,7 +26,6 @@
     border-radius: var(--scroll-radius);
 }
 
-/* Styles pour la barre de défilement sur les autres navigateurs */
 * {
     scrollbar-width: thin;
     scrollbar-color: var(--scroll-thumb-color) var(--scroll-track);
@@ -61,10 +59,6 @@ body {
     font-family: "Raleway", serif;
     color: #000000;
     margin-left: 25px;
-}
-
-section {
-    padding: 10px 0;
 }
 
 section .title1 {
@@ -297,6 +291,7 @@ input[type="search"]::-webkit-search-cancel-button{ display: none; }
     border-radius: 20px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
     margin-bottom: 30px;
+    margin-right: 10px;
 }
 
 .accommodationbox:hover, .activity-box:hover, .famous-box:hover {
@@ -396,6 +391,7 @@ input[type="search"]::-webkit-search-cancel-button{ display: none; }
     position: relative;
     display: flex;
     flex-direction: row;
+    min-width: 295px;
     width: 98%;
     height: 144px;
     background-color: white;
@@ -409,7 +405,8 @@ input[type="search"]::-webkit-search-cancel-button{ display: none; }
 }
 
 .famous-box img {
-    width: 100%;
+    min-width: 70%;
+    width: 130px;
     height: 144px;
     border-radius: 20px 0px 0px 20px;
     border: 5px solid white;
@@ -450,20 +447,25 @@ input[type="search"]::-webkit-search-cancel-button{ display: none; }
 }
 
 .activity-boxes {
-    width: 100%;
+    min-width: 60%;
     max-width: 1400px;
     display: flex;
     justify-content: space-between;
 }
 
 .activity-box {
+    max-width: 100%;
     width: 302px;
-    height: 444.51px;
+    height: auto;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    margin-right: 10px;
 }
 
 .activity-box img{
+    min-width: 60%;
     width: 302px;
+    max-width: 100%;
+    min-height: 60%;
     height: 444.51px;
     border-radius: 20px;
     border-width: 0px 0px 56px 0px;
@@ -516,14 +518,14 @@ input[type="search"]::-webkit-search-cancel-button{ display: none; }
 }
 
 /* Écrans pc */
-@media screen and (min-width: 993px) {
+@media screen and (min-width: 1011px) {
     /* Boutton recherche pc/tel */
     .searchmobile {display: none;}
     .searchcomputer {display: block;}
 }
 
 /* Écrans de tablette */
-@media screen and (min-width: 768px) and (max-width: 992px) {
+@media screen and (min-width: 768px) and (max-width: 1010px) {
 
     .max-width {
         min-width: 768px;
