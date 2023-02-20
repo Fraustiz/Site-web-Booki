@@ -679,32 +679,122 @@ input[type="search"]::-webkit-search-cancel-button{ display: none; }
 
 /* Écrans de téléphones */
 @media only screen and (max-width: 767px) {
+
+    body {
+        margin-left: 0px;
+    }
+
     .max-width {
-        max-width: 768px;
-        margin-inline: 50px;
+        max-width: 700px;
         font-family: "Raleway", serif;
+        margin-inline: 5px;
         background: white;
     }
 
     .navbar {
         display: flex;
         flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .title1 {
+        font-size: 30px;
+    }
+
+    .under-title {
+        font-size: 20px;
+    }
+
+    .div-search {
+        font-size: 25px;
+        border-radius: 25px 0 0 25px;
+        width: 12%;
+        height: 80px;
+    }
+
+    .inputsearch {
+        font-size: 25px;
+        width: 100%;
+        max-width: 520px;
+        height: 80px;
+    }
+
+    .search {
+        font-size: 25px;
+        width: 12%;
+        height: 80px;
+        border-radius: 0 25px 25px 0;
     }
 
     .filters {
         flex-direction: column;
         flex-wrap: wrap;
-        justify-content: flex-start;
+        align-items: flex-start;
     }
 
     .filter-button-box {
-        max-width: 600px;
+        display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        
+    }
+
+    .filters h2 {
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+    
+    .filter-button {
+        height: 80px;
+        border-radius: 50px;
+        width: 100%;
+        max-width: 300px;
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .result {
+        margin-top: 50px;
+        font-size: 20px;
     }
 
     .accommodation-famous {
+        display: flex;
         flex-direction: column-reverse;
+    }
+
+    .famous {
+        width: 700px;
+        margin-bottom: 20px;
+    }
+
+    .accommodation {
+        background-color: transparent;
+        width: 700px;
+    }
+
+    .famous-box {
+        display: flex;
+        flex-direction: column;
+        height: 350px;
+    }
+
+    .famous-box img {
+        border-radius: 20px 20px 0 0;
+        width: 610px;
+        height: 200px;
+    }
+
+    .famous-content h2 {
+        font-size: 25px;
+    }
+
+    .famous-content p {
+        font-size: 20px;
+    }
+
+    .famous-content i {
+        font-size: 25px;
     }
 
     /* Boutton recherche pc/tel */
