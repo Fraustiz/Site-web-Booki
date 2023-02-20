@@ -520,7 +520,7 @@ input[type="search"]::-webkit-search-cancel-button{ display: none; }
     .max-width {
         min-width: 768px;
         max-width: 950px;
-        margin-left: 20px;
+        margin-left: 25px;
         font-family: "Raleway", serif;
         background: white;
     }
@@ -585,8 +585,7 @@ input[type="search"]::-webkit-search-cancel-button{ display: none; }
 
     .menu {
         position: relative;
-        background-color: red;
-        right: 80px;
+        right: 30px;
     }
 
     .accommodation-famous {
