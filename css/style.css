@@ -210,7 +210,6 @@ input[type="search"]::-webkit-search-cancel-button{ display: none; }
     background-color: white;
     font-size: 17px;
     font-weight: bold;
-    background-clip: text;
     transition: all 0.3s ease-in-out;
     margin-left: 20px;
 }
@@ -358,6 +357,7 @@ input[type="search"]::-webkit-search-cancel-button{ display: none; }
 }
 
 .famous-boxes {
+    height: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -388,7 +388,6 @@ input[type="search"]::-webkit-search-cancel-button{ display: none; }
     background-color: white;
     border-radius: 20px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-    margin-bottom: 33px; /* Changer pour automatique avec align-content, voir commentaire ci-dessus */
 }
 
 .famous-img {
@@ -480,7 +479,6 @@ input[type="search"]::-webkit-search-cancel-button{ display: none; }
     max-width: 100%;
     display: flex;
     flex-direction: row;
-    text-align: center;
     justify-content: space-evenly;
     background-color: #F2F2F2;
     border-radius: 20px 20px 0 0;
@@ -687,15 +685,16 @@ input[type="search"]::-webkit-search-cancel-button{ display: none; }
         background: white;
     }
 
-    .navbar {
+    .navbar .max-width {
         display: flex;
+        flex-direction: column;
     }
 
-    .navbar a {
+    /* .navbar a {
         position: relative;
         left: 50%;
         transform: translate(-50%);
-    }
+    } */
 
     .menu {
         display: flex;
@@ -746,7 +745,7 @@ input[type="search"]::-webkit-search-cancel-button{ display: none; }
     .filter-button-box {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: space-evenly;
         max-width: 750px;
     }
 
@@ -759,10 +758,11 @@ input[type="search"]::-webkit-search-cancel-button{ display: none; }
     .filter-button {
         height: 80px;
         border-radius: 50px;
-        width: 300px;
+        width: 180px;
         max-width: 100%;
         font-size: 20px;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
+        margin-left: 0;
     }
 
     .result {
@@ -778,44 +778,40 @@ input[type="search"]::-webkit-search-cancel-button{ display: none; }
     }
 
     .famous {
-        width: 700px;
+        width: 100%;
         height: auto;
         margin-bottom: 20px;
     }
 
     .famous h1 {
-        font-size: 30px;
+        font-size: 25px;
         margin-bottom: 50px;
     }
 
     .famous i {
-        font-size: 30px;
+        font-size: 25px;
     }
 
     .famous-box {
         display: flex;
-        height: 200px;
+        height: 150px;
     }
 
     .famous-box img {
-        height: 200px;
-        width: 250px;
+        height: 100%;
+        min-width: 100%;
     }
 
     .famous-content h2 {
-        font-size: 25px;
-    }
-
-    .famous-content p {
         font-size: 20px;
     }
 
-    .famous-content i {
-        font-size: 25px;
+    .famous-content p {
+        font-size: 15px;
     }
 
-    .famous-content .stars {
-        bottom: 10px;
+    .famous-content i {
+        font-size: 20px;
     }
 
     .accommodation {
