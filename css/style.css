@@ -689,9 +689,18 @@ input[type="search"]::-webkit-search-cancel-button{ display: none; }
 
     .navbar {
         display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
+    }
 
+    .navbar a {
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: row-reverse;
+        max-width: 100%;
     }
 
     .title1 {
