@@ -908,13 +908,12 @@ input[type="search"]::-webkit-search-cancel-button{ display: none; }
     }
 
     .bottom-info{
-        display: flex;
+        position: absolute;
+        background-color: #F2F2F2;
         flex-direction: column;
         text-align: left;
-        background-color: #F2F2F2;
         padding-left: 50px;
         padding-bottom: 0;
-        width: 100%;
     }
 
     .bottom-box {
