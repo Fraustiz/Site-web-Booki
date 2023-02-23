@@ -52,6 +52,7 @@
 }
 
 body {
+    margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -453,7 +454,6 @@ input[type="search"]::-webkit-search-cancel-button{ display: none; }
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
     border-radius: 20px;
     margin-inline: 5px;
-    /* justify-content: space-between; */
 }
 
 .activity-box img{
@@ -506,18 +506,25 @@ input[type="search"]::-webkit-search-cancel-button{ display: none; }
 }
 
 /* Écrans pc */
-@media screen and (min-width: 1011px) {
+@media screen and (min-width: 769px) {
     /* Boutton recherche pc/tel */
     .searchmobile {display: none;}
     .searchcomputer {display: block;}
 }
 
-/* Écrans de tablette */
-@media screen and (min-width: 768px) and (max-width: 1010px) {
+/* ------------------------------------------- Écrans de tablette ------------------------------------------- */
+@media screen and (min-width: 426px) and (max-width: 768px) {
+
+    body {
+        margin-inline: 25px;
+    }
+
+    footer {
+        margin-inline: 25px;
+    }
 
     .max-width {
         max-width: 768px;
-        margin-left: 25px;
         font-family: "Raleway", serif;
         background: white;
     }
@@ -585,12 +592,33 @@ input[type="search"]::-webkit-search-cancel-button{ display: none; }
         right: 30px;
     }
 
+    .filters {
+        flex-wrap: wrap;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .filter-button {
+        margin-left: 10px;
+        font-size: 15px;
+    }
+
+    .filter-button-box {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
     .accommodation-famous {
         display: flex;
         flex-direction: column;
     }
 
     .accommodation {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
         margin-bottom: 53px;
     }
 
@@ -603,8 +631,8 @@ input[type="search"]::-webkit-search-cancel-button{ display: none; }
     }
 
     .famous {
-        width: 880px;
-        height: 300px;
+        width: 100%;
+        height: auto;
         padding: 41px 20px 34px 37px;
     }
 
@@ -617,16 +645,24 @@ input[type="search"]::-webkit-search-cancel-button{ display: none; }
     }
 
     .famous-box {
-        height: 160px;
+        height: 130px;
         margin-right: 20px;
         min-width: 100px;
-        width: 98%;
+        width: 100%;
     }
 
     .famous-box img {
-        width: 110px;
-        height: 160px;
+        width: 90px;
+        height: 130px;
         border: 7px solid white;
+    }
+
+    .famous-content h2 {
+        font-size: 15px;
+    }
+
+    .famous-content p {
+        font-size: 10px;
     }
 
     .famous-content {
@@ -640,30 +676,32 @@ input[type="search"]::-webkit-search-cancel-button{ display: none; }
     }
 
     .activities {
-        width: 880px;
+        width: 100%;
     }
     
-    .activity-box, .activity-box img {
-        width: 200px;
-        height: 300px;
-        text-align: left;
+    .activity-box {
+        height: 260px;
     }
-
-    .activity-box-content {
-        padding-top: 50px;
+    
+    .activity-box img {
+        width: 200px;
+        height: 200px;
     }
 
     .activity-box h2 {
-        position: absolute;
         font-size: 16px;
-        bottom: 18px;
-        left: 10px;
     }
 
     .bottom-info {
-        width: 880px;
+        position: absolute;
+        width: 100%;
         background-color: #F2F2F2;
-        border-radius: 20px 20px 0 0;
+        border-radius: 0;
+        transform: translate(-50%);
+    }
+
+    .bottom-box h2 {
+        font-size: 20px;
     }
 
     /* Boutton recherche pc/tel */
@@ -671,8 +709,8 @@ input[type="search"]::-webkit-search-cancel-button{ display: none; }
     .searchcomputer {display: block;}
 }
 
-/* Écrans de téléphones */
-@media only screen and (max-width: 767px) {
+/* ------------------------------------------- Écrans de téléphones ------------------------------------------- */
+@media only screen and (max-width: 425px) {
 
     body {
         margin-left: 0px;
