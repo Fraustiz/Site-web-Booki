@@ -223,8 +223,6 @@ footer {
 .filter-button:hover {
     background-color: #deebff;
     transform: translateY(-5px);
-    background-color: #deebff;
-    color: black;
     cursor: pointer;
 }
 
@@ -269,16 +267,6 @@ footer {
     margin-bottom: 23px;
 }
 
-.accommodation-row-1, .accommodation-row-2, .filters, .filter-button-box, .filter-buttons, .filter-button, .result {
-    display: flex;
-    align-items: center;
-}
-
-.accommodation-famous {
-    display: flex;
-    justify-content: space-between;
-}
-
 .accommodationbox {
     width: 246px;
     height: 199px;
@@ -289,6 +277,32 @@ footer {
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
     margin-bottom: 30px;
     margin-right: 10px;
+}
+
+.accommodation-content {
+    margin-left: 16px;
+}
+
+.accommodation-content h2 {
+    margin-top: 0;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.accommodation-content p {
+    margin-top: 0;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.accommodation-row-1, .accommodation-row-2, .filters, .filter-button-box, .filter-buttons, .filter-button, .result {
+    display: flex;
+    align-items: center;
+}
+
+.accommodation-famous {
+    display: flex;
+    justify-content: space-between;
 }
 
 .accommodationbox:hover, .activity-box:hover, .famous-box:hover {
@@ -306,22 +320,6 @@ footer {
 
 .accommodationbox:hover, .activity-box:hover, .famous-box:hover {
     transform: scale(1.05);
-}
-
-.accommodation-content {
-    margin-left: 16px;
-}
-
-.accommodation-content h2 {
-    margin-top: 0;
-    font-size: 16px;
-    margin-bottom: 5px;
-}
-
-.accommodation-content p {
-    margin-top: 0;
-    font-size: 14px;
-    margin-bottom: 5px;
 }
 
 .stars {
@@ -913,11 +911,18 @@ footer {
     .see-more h2 {
         font-size: 25px;
         text-decoration: none;
-        border: 1px solid black;
+        border: 2px solid #d9d9d9;
         border-radius: 20px;
         padding-block: 5px;
         background-color: white;
         filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+        transition: all 0.3s ease-in-out;
+    }
+
+    .see-more h2:hover {
+        background-color: #deebff;
+        transform: translateY(-5px);
+        cursor: pointer;
     }
 
     .activities {
