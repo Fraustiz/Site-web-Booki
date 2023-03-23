@@ -58,7 +58,7 @@ input[type="search"]::-webkit-search-cancel-button{ display: none; }
 }
 
 body {
-    margin-inline: 30px;
+    margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -72,14 +72,12 @@ section .title1 {
     margin-top: 40px;
 }
 
-a {
-    text-decoration: none;
-    color: black;
+footer {
+    margin-top: 80px;
 }
 
 .max-width {
     width: 100%;
-    min-width: 320px;
     max-width: 1400px;
     margin: auto;
     font-family: "Raleway", serif;
@@ -249,8 +247,9 @@ a {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    max-width: 70%;
-    min-width: 60%;
+    width: 100%;
+    max-width: 880px;
+    min-height: 626px;
     padding: 42px 40px;
     background-color: #F2F2F2;
     border-radius: 20px;
@@ -258,7 +257,7 @@ a {
 }
 
 .accommodation img {
-    width: 100%;
+    width: 246px;
     height: 124px;
     border-radius: 20px 20px 0px 0px;
     object-fit: cover;
@@ -273,21 +272,15 @@ a {
 }
 
 .accommodationbox {
-    width: 30%;
-    max-height: 100%;
+    width: 246px;
+    height: 199px;
     display: flex;
     flex-direction: column;
     background-color: white;
     border-radius: 20px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
     margin-bottom: 30px;
-}
-
-.accommodation-row {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    margin-right: 10px;
 }
 
 .accommodation-content {
@@ -339,7 +332,6 @@ a {
     height: 12px;
     width: 12px;
     margin-right: 2px;
-    margin-bottom: 10px;
 }
 
 .see-more h2 {
@@ -351,12 +343,9 @@ a {
 
 .see-more {
     width: 100%;
-    font-size: 18px;
-    font-weight: bold;
-    text-decoration: underline;
 }
 
-.see-more h2:hover, .see-more a:hover {
+.see-more h2:hover {
     cursor: pointer;
     color: #0065FC;
 }
@@ -379,7 +368,7 @@ a {
     margin: 0;
 }
 
-.famous h2 {
+.famous h1 {
     margin-top: 0;
     font-size: 22px;
     margin-bottom: 26px;
@@ -439,7 +428,7 @@ a {
     margin-bottom: 22px;
 }
 
-.activities h2 {
+.activities h1 {
     margin-top: 60px;
     margin-bottom: 18px;
     font-size: 22px;
@@ -492,45 +481,41 @@ a {
     max-width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-evenly;
     background-color: #F2F2F2;
-    padding: 70px 0 45px 70px;
-    margin-top: 80px;
+    border-radius: 20px 20px 0 0;
+    padding: 70px 0 45px 0;
 }
 
-.bottom-box {
-    margin-right: 230px;
-}
 
 .bottom-box h2 {
     margin-bottom: 20px;
 }
 
-.bottom-content {
-    display: flex;
-    flex-direction: column;
-}
-
-.bottom-box a {
+.bottom-box p {
     margin-bottom: 12px;
-    color: #000000;
-    text-decoration: none;
 }
 
-.bottom-box a:hover {
+.bottom-box p:hover {
     cursor: pointer;
     color: #0065FC;
 }
 
+@media screen and (max-width: 1400px) {
+    .bottom-info {
+        border-radius: 0;
+    }
+}
+
 /* Écrans pc */
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 769px) {
     /* Boutton recherche pc/tel */
     .searchmobile {display: none;}
     .searchcomputer {display: block;}
 }
 
 /* ------------------------------------------- Écrans de tablette ------------------------------------------- */
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 426px) and (max-width: 768px) {
 
     body {
         margin-inline: 25px;
@@ -631,10 +616,11 @@ a {
     }
 
     .accommodation {
-        max-width: 100%;
         width: 100%;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
         margin-bottom: 53px;
     }
 
@@ -709,13 +695,11 @@ a {
     }
 
     .bottom-info {
+        position: absolute;
         width: 100%;
         background-color: #F2F2F2;
         border-radius: 0px;
-    }
-
-    .bottom-box {
-        margin-right: 60px;
+        transform: translate(-50%);
     }
 
     .bottom-box h2 {
@@ -728,10 +712,10 @@ a {
 }
 
 /* ------------------------------------------- Écrans de téléphones ------------------------------------------- */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 425px) {
 
     body {
-        margin-inline: 0px;
+        margin-left: 0px;
         align-items: flex-start;
     }
 
@@ -832,10 +816,9 @@ a {
         border-radius: 50px;
         width: 180px;
         max-width: 100%;
-        width: 40%;
         font-size: 20px;
         margin-bottom: 15px;
-        margin-left: 20px;
+        margin-left: 0;
     }
 
     .result {
@@ -893,7 +876,6 @@ a {
 
     .accommodation {
         background-color: transparent;
-        max-width: 100%;
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -903,14 +885,8 @@ a {
     .accommodationbox {
         display: flex;
         flex-direction: column;
-        max-width: 100%;
         width: 100%;
         height: 250px;
-    }
-
-    .accommodation-row {
-        display: flex;
-        flex-direction: column;
     }
 
     .accommodation img {
@@ -932,7 +908,8 @@ a {
     }
 
     .see-more {
-        display: none;
+        text-align: center;
+        margin-top: 20px;
     }
 
     .see-more h2 {
